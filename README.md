@@ -38,7 +38,7 @@ then
 
     rspec
 
-There are 15 tests giving an over 90% code coverage of the whole project.
+There are 16 tests giving an over 90% code coverage of the whole project.
 
 ## License
 

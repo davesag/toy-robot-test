@@ -81,7 +81,7 @@ To exit simply crtl-C.
       return unless com
       case com.command
       when :place
-        robot.place(com.params[0].to_i, com.params[1].to_i, com.params[2].to_sym)
+        robot.place(com.params[0].to_i, com.params[1].to_i, com.params[2].to_sym) if com.params.length == 3
       when :move
         robot.move
       when :left

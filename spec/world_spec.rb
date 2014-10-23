@@ -5,11 +5,19 @@ describe ToyRobot::World do
   let(:world) { ToyRobot::World.new }
   let(:robot) { world.robot         }
   let(:place) { "PLACE 0,0,NORTH"   }
+  let(:bad_place) { "PLACE 0,0"   }
 
   it "ignores an invalid command" do
     world.command(place)
     check_robot 0, 0, :north
     world.command('nonsense')
+    check_robot 0, 0, :north
+  end
+
+  it "ignores a place command with the wrong number of params" do
+    world.command(place)
+    check_robot 0, 0, :north
+    world.command(bad_place)
     check_robot 0, 0, :north
   end
 

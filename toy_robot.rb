@@ -24,7 +24,7 @@ Commands:
   LEFT or RIGHT - Turn the robot left or right
   REPORT        - Output the current position and facing of the robot.
 
-To exit simply crtl-C and hit return.
+To exit simply crtl-C.
       eos
     end
     

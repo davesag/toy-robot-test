@@ -18,7 +18,7 @@ Welcome to the Toy Robot Simulator.
 
 Commands:
   PLACE x, y, f - Place the robot on the board at point x,y, facing f
-                  0, 0 is at the left, top of the board.
+                  0, 0 is at the left, bottom of the board.
                   f is one of NORTH, SOUTH, EAST, or WEST
   MOVE          - Move the robot one square
   LEFT or RIGHT - Turn the robot left or right
@@ -101,8 +101,8 @@ To exit simply crtl-C.
   class Robot
     attr_reader :x, :y, :f
     DIRECTIONS = {
-      north: { x:  0, y: -1, left: :west,  right: :east  },
-      south: { x:  0, y:  1, left: :east,  right: :west  },
+      north: { x:  0, y:  1, left: :west,  right: :east  },
+      south: { x:  0, y: -1, left: :east,  right: :west  },
       east:  { x:  1, y:  0, left: :north, right: :south },
       west:  { x: -1, y:  0, left: :south, right: :north }
     }
